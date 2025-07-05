@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { FaShareAlt } from 'react-icons/fa';
 
-const page = () => {
+const Page = () => {
   const [reports, setReports] = useState([]);
   const [matches, setMatches] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
@@ -240,4 +240,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

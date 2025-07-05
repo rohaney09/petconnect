@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import Navbar from "./Navbar/page.js"
+import Navbar from "./Navbar/Pages.js";
 import Footer from "./Footer/Footer.js";
 
 const geistSans = Geist({
@@ -20,20 +20,20 @@ export const metadata = {
 };
 
 const handleClick = () => {
-   router.push('/about');
-}
+  router.push("/about");
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <div>
-          <Navbar/>
-           {children}
-           {/* <Link href="/">
+          <Navbar />
+          {children}
+          {/* <Link href="/">
               <button className="bg-red-400 mx-1.5 my-1.5 border-2 ml-330 rounded-3xl p-2.5 text-1xl cursor-pointer">Go to Home Page</button>
           </Link> */}
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>

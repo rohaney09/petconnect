@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       {/* Header */}
@@ -63,4 +63,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

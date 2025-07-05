@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
   return (
     <>
       {/* Hero Section */}
@@ -38,7 +38,7 @@ const page = () => {
             We are a passionate team of animal lovers, tech enthusiasts, and community advocates.
           </p>
           <p className="text-gray-700 text-lg">
-            Whether it's building intuitive features or spreading awareness, we're committed to making a difference in the lives of pets and their humans.
+            Whether it&rsquo;s building intuitive features or spreading awareness, we&rsquo;re committed to making a difference in the lives of pets and their humans.
           </p>
         </div>
       </section>
@@ -46,4 +46,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
