@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import React from "react";
 
-const page = () => {
+const Page = () => {
 const [form, setForm] = useState({
   type: '',
   petType: '',
@@ -215,4 +215,4 @@ const [form, setForm] = useState({
   );
 };
 
-export default page;
+export default Page;

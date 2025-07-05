@@ -4,7 +4,9 @@ import { NextResponse } from 'next/server';
 
 export async function PATCH(req, { params }) {
   try {
-    const { id } = params;
+    const id = params?.id;
+    if (!id) throw new Error("Missing ID in params");
+
     const { reunited } = await req.json();
     const client = await clientPromise;
     const db = client.db("petconnect");
