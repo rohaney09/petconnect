@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 
-const Page = () => {
+const Pages = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -71,4 +71,4 @@ return (
 );
 }
 
-export default Page;
+export default Pages;
