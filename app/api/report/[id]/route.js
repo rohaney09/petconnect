@@ -13,7 +13,7 @@ export async function PATCH(req, { params }) {
 
     await db.collection("reports").updateOne(
       { _id: new ObjectId(id) },
-      { $set: { reunited: reunited } }
+      { $set: { reunited } }
     );
 
     return NextResponse.json({ success: true });
