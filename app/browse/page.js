@@ -58,16 +58,16 @@ const Page = () => {
     alert('Pet info copied to clipboard! Share it anywhere 📲');
   };
 
-  useEffect(() => {
-    const fetchReports = async () => {
-      const res = await fetch('/api/report');
-      const data = await res.json();
-      setReports(data);
-      const reunited = data.filter(r => r.reunited);
-      setReunitedPets(reunited);
-    };
-    fetchReports();
-  }, []);
+  // useEffect(() => {
+  //   const fetchReports = async () => {
+  //     const res = await fetch('/api/report');
+  //     const data = await res.json();
+  //     setReports(data);
+  //     const reunited = data.filter(r => r.reunited);
+  //     setReunitedPets(reunited);
+  //   };
+  //   fetchReports();
+  // }, []);
 
   const filterBySearch = (r) => (
     r.petName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
