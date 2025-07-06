@@ -1,4 +1,4 @@
-import clientPromise from '@/lib/mongodb';
+import clientPromise from "../../../../lib/mongodb";
 import { ObjectId } from 'mongodb';
 import { NextResponse } from 'next/server';
 
@@ -6,7 +6,6 @@ export async function PATCH(request, context) {
   try {
     const id = context?.params?.id;
 
-    // Validate ID
     if (!id || !ObjectId.isValid(id)) {
       return NextResponse.json(
         { success: false, message: 'Invalid or missing ID' },
@@ -16,18 +15,17 @@ export async function PATCH(request, context) {
 
     const { reunited } = await request.json();
 
-    // Validate payload
     if (typeof reunited !== 'boolean') {
       return NextResponse.json(
-        { success: false, message: 'Invalid reunited value. Must be boolean.' },
+        { success: false, message: 'Invalid reunited value' },
         { status: 400 }
       );
     }
 
     const client = await clientPromise;
-    const db = client.db('petconnect');
+    const db = client.db("petconnect");
 
-    const result = await db.collection('reports').updateOne(
+    const result = await db.collection("reports").updateOne(
       { _id: new ObjectId(id) },
       { $set: { reunited } }
     );
@@ -39,11 +37,11 @@ export async function PATCH(request, context) {
       );
     }
 
-    return NextResponse.json({ success: true, message: 'Marked as reunited' });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('PATCH /api/report/[id] error:', error);
     return NextResponse.json(
-      { success: false, message: 'Server error: ' + error.message },
+      { success: false, message: error.message },
       { status: 500 }
     );
   }
