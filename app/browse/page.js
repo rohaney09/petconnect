@@ -24,31 +24,31 @@ const Page = () => {
   };
 
   const markAsReunited = async (id) => {
-  try {
-    const res = await fetch(`/api/report/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ reunited: true })
-    });
+  // try {
+  //   const res = await fetch(`/api/report/${id}`, {
+  //     method: 'PATCH',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({ reunited: true })
+  //   });
 
-    if (!res.ok) throw new Error('Failed to update status');
+  //   if (!res.ok) throw new Error('Failed to update status');
 
-    // Update local report
-    const updatedReports = reports.map(r =>
-      r._id === id ? { ...r, reunited: true } : r
-    );
+  //   // Update local report
+  //   const updatedReports = reports.map(r =>
+  //     r._id === id ? { ...r, reunited: true } : r
+  //   );
 
-    setReports(updatedReports);
+  //   setReports(updatedReports);
 
-    // Add updated report directly from updatedReports
-    const updatedReport = updatedReports.find(r => r._id === id);
-    if (updatedReport) {
-      setReunitedPets(prev => [...prev, updatedReport]);
-    }
+  //   // Add updated report directly from updatedReports
+  //   const updatedReport = updatedReports.find(r => r._id === id);
+  //   if (updatedReport) {
+  //     setReunitedPets(prev => [...prev, updatedReport]);
+  //   }
 
-  } catch (error) {
-    console.error('Failed to mark as reunited', error);
-  }
+  // } catch (error) {
+  //   console.error('Failed to mark as reunited', error);
+  // }
 };
 
 
