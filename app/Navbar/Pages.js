@@ -14,7 +14,7 @@ return (
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-white text-2xl sm:text-3xl font-bold">🐾 PetConnect</h1>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger Icon */} 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="sm:hidden text-white focus:outline-none"
