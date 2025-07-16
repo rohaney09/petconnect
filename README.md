@@ -54,8 +54,8 @@ Frontend: React (Next.js)
 
 Styling: Tailwind CSS
 
-Backend: Node.js with Express (if used)
+Backend: Node.js with Express
 
-Database: MongoDB (if connected for storing reports)
+Database: MongoDB 
 
 Deployment: Vercel
