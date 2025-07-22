@@ -11,6 +11,7 @@ const Page = () => {
           PetConnect is a heartfelt initiative to reunite lost pets with their families. We believe in the power of community, compassion, and technology to bring tails back home.
         </p>
       </section>
+  
 
       {/* Mission & Vision */}
       <section className="py-16 px-6 bg-white">
