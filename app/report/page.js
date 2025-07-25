@@ -14,6 +14,7 @@ const [form, setForm] = useState({
   contact: '',
   photo: null,
   previewUrl: ''
+  
 });
 
 
@@ -27,7 +28,6 @@ const [form, setForm] = useState({
     reader.readAsDataURL(file);
   }
 };
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
