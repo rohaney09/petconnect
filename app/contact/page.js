@@ -4,7 +4,6 @@ import Link from 'next/link';
 const Page = () => {
   return (
     <>
-      {/* Header */}
       <section className="bg-gradient-to-r from-blue-100 to-pink-100 py-20 px-6 text-center">
         <h1 className="text-4xl font-extrabold text-gray-800 mb-2">📞 Contact Us</h1>
         <p className="text-gray-700 text-lg">We’re here to help you connect with lost pets and their owners.</p>
