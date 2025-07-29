@@ -34,7 +34,7 @@ const Page = () => {
 
     if (!res.ok) throw new Error('Failed to update status');
 
-    // Update local report
+    // Update local report  
     const updatedReports = reports.map(r =>
       r._id === id ? { ...r, reunited: true } : r
     );
