@@ -1,7 +1,6 @@
 import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
-// POST - Save a new pet report and check for matches
 export async function POST(req) {
   try {
     const data = await req.json();
