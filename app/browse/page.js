@@ -19,6 +19,7 @@ const Page = () => {
       const locationMatch = found.location?.toLowerCase().includes(lostPet.location?.toLowerCase());
       return nameMatch || locationMatch;
     });
+    
     setMatches(potentialMatches);
     setShowPopup(true);
   };
