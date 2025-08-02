@@ -10,7 +10,7 @@ export async function POST(req) {
     // Insert the report
     const result = await db.collection("reports").insertOne(data);
 
-    // Matching logic (optional)
+    // Matching logic
     const oppositeType = data.type === "Lost" ? "Found" : "Lost";
 
     const matches = await db.collection("reports").find({
