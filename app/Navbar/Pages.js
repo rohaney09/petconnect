@@ -7,7 +7,7 @@ import { FiMenu } from "react-icons/fi";
 const Pages = () => {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
 return (
   <>
     <nav className="bg-gray-800 p-4 relative z-50">
