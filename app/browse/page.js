@@ -13,7 +13,7 @@ const Page = () => {
   const [reunitedPets, setReunitedPets] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4);
 
-  const handleMatchClick = (lostPet) => {
+  const handleMatchClick =(lostPet) => {
     const foundPets = reports.filter(p => p.type === 'Found');
     const potentialMatches = foundPets.filter(found => {
       const nameMatch = found.petName?.toLowerCase().includes(lostPet.petName?.toLowerCase() );
