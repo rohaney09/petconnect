@@ -14,7 +14,7 @@ export async function POST(req) {
     const oppositeType = data.type === "Lost" ? "Found" : "Lost";
 
     const matches = await db.collection("reports").find({
-      type: oppositeType,
+      type:oppositeType,
       location: { $regex: new RegExp(data.location, "i") },
       petName: { $regex: new RegExp(data.petName, "i") },
     }).toArray();
