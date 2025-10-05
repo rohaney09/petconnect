@@ -13,7 +13,7 @@ export async function POST(req) {
     // Matching logic 
     const oppositeType = data.type === "Lost" ? "Found" : "Lost";
 
-    const matches = await db.collection("reports").find({
+    const matches =await db.collection("reports").find({
       type:oppositeType,
       location: { $regex: new RegExp(data.location, "i") },
       petName: { $regex: new RegExp(data.petName, "i") },
@@ -32,8 +32,8 @@ export async function POST(req) {
 export async function GET() {
   try {
     const client = await clientPromise;
-    const db = client.db("petconnect");
-    const reports = await db.collection("reports").find({}).toArray();
+    const db =client.db("petconnect");
+    const reports =await db.collection("reports").find({}).toArray();
     return NextResponse.json(reports);
   } catch (error) {
     return NextResponse.json(
